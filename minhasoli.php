@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "conect.php";
+include "conexao.php";
 if (!isset($_SESSION['id'])) header("Location: entrar.php");
 
 $res = $conn->query("SELECT ID, `Local`, TipoProblema, Descricao, DataSolicitacao, Estado
@@ -27,3 +27,4 @@ $res = $conn->query("SELECT ID, `Local`, TipoProblema, Descricao, DataSolicitaca
     <p><a href="painelinicial.php">Voltar</a></p>
 </body>
 </html>
+
