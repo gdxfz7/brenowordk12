@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "conect.php";
+include "conexao.php";
 if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') header("Location: entrar.php");
 
 $res = $conn->query("SELECT ID, UtilizadorID, Local, TipoProblema, Descricao, DataSolicitacao, Estado FROM Solicitacoes");
@@ -28,4 +28,5 @@ $res = $conn->query("SELECT ID, UtilizadorID, Local, TipoProblema, Descricao, Da
     <p><a href="painelinicial.php">Voltar</a></p>
 </body>
 </html>
+
 
