@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "conect.php";
+include "conexao.php";
 $erro = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -38,3 +38,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <p><a href="registar.php">Registar</a></p>
 </body>
 </html>
+
