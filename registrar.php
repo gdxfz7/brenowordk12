@@ -1,5 +1,5 @@
 <?php
-include "conect.php"; // ligação à base de dados
+include "conexao.php"; // ligação à base de dados
 $mensagem = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -56,3 +56,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <p><a href="entrar.php">Voltar ao login</a></p>
 </body>
 </html>
+
