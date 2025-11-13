@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "conect.php";
+include "conexao.php";
 if (!isset($_SESSION['id'])) header("Location: entrar.php");
 
 $msg = "";
@@ -37,3 +37,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <p><a href="painelinicial.php">Voltar</a></p>
 </body>
 </html>
+
