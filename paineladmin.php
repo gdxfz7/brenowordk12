@@ -3,10 +3,8 @@ session_start();
 include "conect.php";
 if (!isset($_SESSION['id']) || $_SESSION['tipo'] !== 'admin') header("Location: entrar.php");
 
-$res = $conn->query("SELECT s.ID, s.UtilizadorID, u.nome AS utilizador, s.`Local`, s.TipoProblema, s.Descricao, s.DataSolicitacao, s.Estado
-                     FROM Solicitacoes s
-                     LEFT JOIN Utilizadores u ON s.UtilizadorID = u.ID
-                     ORDER BY s.DataSolicitacao DESC");
+$res = $conn->query("SELECT ID, UtilizadorID, Local, TipoProblema, Descricao, DataSolicitacao, Estado FROM Solicitacoes");
+
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -30,3 +28,4 @@ $res = $conn->query("SELECT s.ID, s.UtilizadorID, u.nome AS utilizador, s.`Local
     <p><a href="painelinicial.php">Voltar</a></p>
 </body>
 </html>
+
